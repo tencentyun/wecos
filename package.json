@@ -10,7 +10,8 @@
   "main": "index.js",
   "scripts": {
     "test": "cd test && node index.js",
-    "test-mod": "cd test && node test-mod.js"
+    "test-config-file": "cd test && node test-config-file.js",
+    "test-config-option": "cd test && node test-config-option.js"
   },
   "bin": {
     "wecos": "./bin/wecos.js"
