@@ -50,7 +50,7 @@ npm install -g wecos
 ```
 
 | 配置项 | 类型 | 说明 |
-| -- | -- | -- |
+|:-- |:-- |:-- |
 | appDir | *[String]* | 默认是 `./app`，小程序项目目录|
 | backupDir | *[String]* | 默认是 `./wecos_backup`，静态图片上传 COS 后会在原项目目录中删除，这里指定原图片资源的备份目录|
 | uploadFileSuffix | *[Array]* | 默认是 `[".jpg", ".png", ".gif"]`，上传的图片资源的后缀名|
