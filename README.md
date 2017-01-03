@@ -72,5 +72,5 @@ var wecos = require('wecos');
 * 传入 String，指定配置文件路径
 * 传入 Object，指定配置项
 */
-wecos([option]); // option：传入配置文件路径或者配置项
+wecos([option]);
 ```
