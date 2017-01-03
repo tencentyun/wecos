@@ -19,7 +19,7 @@
 ## 安装
 
 ```js
-tnpm install -g wecos
+npm install -g wecos
 ```
 
 ## 配置
