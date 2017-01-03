@@ -30,7 +30,7 @@ tnpm install -g wecos
 ```json
 {
   "appDir": "./app",
-  "backupDir": "./.backup",
+  "backupDir": "./wecos_backup",
   "uploadFileSuffix": [
     ".jpg",
     ".png",
@@ -49,12 +49,15 @@ tnpm install -g wecos
 }
 ```
 
-appDir：[String]，小程序项目目录，默认是 `./app`  
-backupDir：[String]，静态图片上传 COS 后会在原项目目录中删除，这里指定原图片资源的备份目录，默认是 `./.backup`  
-uploadFileSuffix：[Array]，上传的图片资源的后缀名，默认是 `[".jpg", ".png", ".gif"]`  
-uploadFileBlackList：[Array]，指定不进行匹配的图片资源目录，默认是空  
-compress：[Boolean],是否开启压缩图片，如果开启，需要先在万象优图控制台创建 COS 同名 Bucket（万象优图创建Bucket有一定延时，需等待 Bucket 生效）。  
-cos：[Object]，填写需要上传到COS对应的 appid、bucketname、folder、region、secret_key、secret_id，部分信息可在此处查看 https://console.qcloud.com/cos4/secret
+| 配置项 | 类型 | 说明 |
+| -- | -- | -- |
+| appDir | *[String]* | 默认是 `./app`，小程序项目目录|
+| backupDir | *[String]* | 默认是 `./wecos_backup`，静态图片上传 COS 后会在原项目目录中删除，这里指定原图片资源的备份目录|
+| uploadFileSuffix | *[Array]* | 默认是 `[".jpg", ".png", ".gif"]`，上传的图片资源的后缀名|
+| uploadFileBlackList | *[Array]* | 默认是 `[]`，指定不进行匹配的图片资源目录|
+| compress | *[Boolean]* | 默认 false，是否开启压缩图片，如果开启，需要先在万象优图控制台创建 COS 同名 Bucket（万象优图创建Bucket有一定延时，需等待 Bucket 生效）。|
+| cos | *[Object]* | 必填，填写需要上传到COS对应的 appid、bucketname、folder、region、secret_key、secret_id，部分信息可在此处查看 https://console.qcloud.com/cos4/secret|
+
 
 ## 使用
 

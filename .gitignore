@@ -3,6 +3,6 @@ node_modules
 test/app-src
 test/app
 test/.tmp
-test/.backup
+test/wecos_backup
 test/wecos.config.json
 npm-debug.log
