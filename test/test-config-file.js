@@ -1,4 +1,4 @@
 'use strict';
 
-var wecos = require('../bin/watcher.js');
+var wecos = require('../lib/watcher.js');
 wecos('./wecos.config.json');

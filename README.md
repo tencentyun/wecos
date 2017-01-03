@@ -31,13 +31,10 @@ npm install -g wecos
 {
   "appDir": "./app",
   "backupDir": "./wecos_backup",
-  "uploadFileSuffix": [
-    ".jpg",
-    ".png",
-    ".gif"
-  ],
+  "uploadFileSuffix": [".jpg",".png",".gif"],
   "uploadFileBlackList": [],
   "compress": false,
+  "watch": true,
   "cos": {
     "appid": "1234567890",
     "bucketname": "wxapp",
@@ -51,16 +48,29 @@ npm install -g wecos
 
 | 配置项 | 类型 | 说明 |
 |:-- |:-- |:-- |
-| appDir | *[String]* | 默认是 `./app`，小程序项目目录|
-| backupDir | *[String]* | 默认是 `./wecos_backup`，静态图片上传 COS 后会在原项目目录中删除，这里指定原图片资源的备份目录|
-| uploadFileSuffix | *[Array]* | 默认是 `[".jpg", ".png", ".gif"]`，上传的图片资源的后缀名|
-| uploadFileBlackList | *[Array]* | 默认是 `[]`，指定不进行匹配的图片资源目录|
-| compress | *[Boolean]* | 默认 false，是否开启压缩图片，如果开启，需要先在万象优图控制台创建 COS 同名 Bucket（万象优图创建Bucket有一定延时，需等待 Bucket 生效）。|
-| cos | *[Object]* | 必填，填写需要上传到COS对应的 appid、bucketname、folder、region、secret_key、secret_id，部分信息可在此处查看 https://console.qcloud.com/cos4/secret|
+| appDir | **[String]** | 默认 `./app`，小程序项目目录 |
+| backupDir | **[String]** | 默认 `./wecos_backup`，静态图片上传 COS 后会在原项目目录中删除，这里指定原图片资源的备份目录 |
+| uploadFileSuffix | **[Array]** | 默认 `[".jpg", ".png", ".gif"]`，上传的图片资源的后缀名 |
+| uploadFileBlackList | **[Array]** | 默认 `[]`，指定不进行匹配的图片资源目录 |
+| compress | **[Boolean]** | 默认 `false`，是否开启压缩图片，如果开启，需要先在万象优图控制台创建 COS 同名 Bucket（万象优图创建Bucket有一定延时，需等待 Bucket 生效） |
+| watch | **[Boolean]** | 默认 `true`，是否开启实时监听文件变化 |
+| cos | **[Object]** | 必填，填写需要上传到COS对应的 appid、bucketname、folder、region、secret_key、secret_id，部分信息可在此处查看 https://console.qcloud.com/cos4/secret |
 
 
 ## 使用
 
-WeCOS提供了命令行方式
+WeCOS提供了两种调用方式
 
 * 命令行执行 `wecos`
+
+* node 模块调用
+```js
+var wecos = require('wecos');
+
+/**
+* option 可选 [String|Object]
+* 传入 String，指定配置文件路径
+* 传入 Object，指定配置项
+*/
+wecos([option]); // option：传入配置文件路径或者配置项
+```
