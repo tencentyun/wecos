@@ -1,0 +1,51 @@
+{
+  "name": "@tencent/wecos",
+  "version": "0.0.1",
+  "description": "Tencent Qcloud COS about node utilities for wxapp minify.",
+  "keywords": [
+    "cos",
+    "wxapp",
+    "minify"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "cd test && node index.js"
+  },
+  "bin": {
+    "wecos": "./bin/wecos.js"
+  },
+  "homepage": "https://github.com/tencentyun/wecos",
+  "bugs": "https://github.com/tencentyun/wecos/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tencentyun/wecos.git"
+  },
+  "author": {
+    "name": "carsonxu"
+  },
+  "maintainers": [
+    {
+      "name": "carsonxu"
+    },
+    {
+      "name": "galen-yip",
+      "email": "s275497985@gmail.com"
+    },
+    {
+      "name": "yinshawnrao"
+    }
+  ],
+  "engines": {
+    "node": ">=0.9"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chokidar": "^1.6.1",
+    "formstream": "^1.1.0",
+    "glob": "^7.1.1",
+    "listr": "^0.9.0",
+    "lodash": "^4.17.4",
+    "ora": "^0.4.0",
+    "request": "^2.79.0"
+  }
+}
