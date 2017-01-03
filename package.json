@@ -9,7 +9,8 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "cd test && node index.js"
+    "test": "cd test && node index.js",
+    "test-mod": "cd test && node test-mod.js"
   },
   "bin": {
     "wecos": "./bin/wecos.js"
