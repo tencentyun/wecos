@@ -12,9 +12,9 @@
 
 开通COS服务并创建Bucket，如需开启图片压缩功能，需在万象优图创建同名Bucket
 
-[对象存储服务COS传送门](https://console.qcloud.com/cos4/index)  
+[对象存储服务COS传送门](https://www.qcloud.com/product/cos)  
 
-[万象优图传送门](https://console.qcloud.com/ci)
+[万象优图传送门](https://www.qcloud.com/product/ci)
 
 ## 安装
 
@@ -22,7 +22,7 @@
 npm install -g wecos
 ```
 
-## 配置
+## 基本配置
 
 配置文件：如小程序目录为`app`，在与app目录同级下创建`wecos.config.json`文件。
 
@@ -30,11 +30,6 @@ npm install -g wecos
 ```json
 {
   "appDir": "./app",
-  "backupDir": "./wecos_backup",
-  "uploadFileSuffix": [".jpg",".png",".gif"],
-  "uploadFileBlackList": [],
-  "compress": false,
-  "watch": true,
   "cos": {
     "appid": "1234567890",
     "bucketname": "wxapp",
@@ -49,21 +44,61 @@ npm install -g wecos
 | 配置项 | 类型 | 说明 |
 |:-- |:-- |:-- |
 | appDir | **[String]** | 默认 `./app`，小程序项目目录 |
-| backupDir | **[String]** | 默认 `./wecos_backup`，静态图片上传 COS 后会在原项目目录中删除，这里指定原图片资源的备份目录 |
-| uploadFileSuffix | **[Array]** | 默认 `[".jpg", ".png", ".gif"]`，上传的图片资源的后缀名 |
+| cos | **[Object]** | 必填，填写需要上传到COS对应的配置信息，部分信息可在[COS控制台](https://console.qcloud.com/cos4/secret)查看 |
+
+
+## 高级配置
+
+| 配置项 | 类型 | 说明 |
+|:-- |:-- |:-- |
+| backupDir | **[String]** | 默认 `./wecos_backup`，备份目录 |
+| uploadFileSuffix | **[Array]** | 默认 `[".jpg", ".png", ".gif"]`，需要处理的图片的后缀名 |
 | uploadFileBlackList | **[Array]** | 默认 `[]`，指定不进行匹配的图片资源目录或具体图片的路径 |
 | compress | **[Boolean]** | 默认 `false`，是否开启压缩图片，如果开启，需要先在万象优图控制台创建 COS 同名 Bucket（万象优图创建Bucket有一定延时，需等待 Bucket 生效） |
 | watch | **[Boolean]** | 默认 `true`，是否开启实时监听文件变化 |
-| cos | **[Object]** | 必填，填写需要上传到COS对应的 appid、bucketname、folder、region、secret_key、secret_id，部分信息可在此处查看 https://console.qcloud.com/cos4/secret |
 
+#### 设置备份目录
+
+WeCOS提供了文件备份功能，避免误删除需要的文件，支持指定文件夹
+```json
+  "backupDir": "./wecos_backup"
+```
+
+#### 设置图片后缀
+
+WeCOS提供了指定处理资源的后缀名功能，未指定的后缀类型不会被处理
+```json
+  "uploadFileSuffix": [".jpg",".png",".gif"]
+```
+
+#### 设置图片黑名单
+
+WeCOS提供了指定不处理的资源黑名单功能，支持目录或具体路径
+```json
+  "uploadFileBlackList": ["./images/logo.png"]
+```
+
+#### 开启图片压缩
+
+WeCOS提供了基于万象优图的图片压缩功能，资源将被压缩后上传（注：需在[万象优图控制台](https://console.qcloud.com/ci)创建 COS同名bucket）
+```json
+  "compress": true
+```
+
+#### 开启实时监听
+
+WeCOS默认实时监听项目目录变化，自动处理资源，如果只需要一次性处理，可以修改该配置
+```json
+  "watch": false
+```
 
 ## 使用
 
 WeCOS提供了两种调用方式
 
-* 命令行执行 `wecos`
+* 在配置文件同级目录下命令行执行 `wecos`，需要该目录下有`wecos.config.json`文件
 
-* node 模块调用
+* node 模块调用，手动传入配置项
 ```js
 var wecos = require('wecos');
 
