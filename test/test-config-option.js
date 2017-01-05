@@ -9,11 +9,11 @@ wecos({
     "compress": false,
     "watch": false,
     "cos": {
-        "appid": "1253189073",
-        "bucketname": "weixintest",
-        "folder": "/test",
-        "region": "tj",
-        "secret_key": "RinhPvX4QaEj2A6zhP1S5WuHrUWP7dmn",
-        "secret_id": "AKIDOi5LPIYjQwZmqmLEg0BJ3kLo6D9ubwWz"
+        "appid": "",
+        "bucketname": "",
+        "folder": "",
+        "region": "",
+        "secret_key": "",
+        "secret_id": ""
     }
 });
