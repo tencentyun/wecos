@@ -12,9 +12,9 @@
 
 开通COS服务并创建Bucket，如需开启图片压缩功能，需在万象优图创建同名Bucket
 
-[对象存储服务COS传送门](https://www.qcloud.com/product/cos)  
+* [对象存储服务COS传送门](https://www.qcloud.com/product/cos)  
 
-[万象优图传送门](https://www.qcloud.com/product/ci)
+* [万象优图传送门](https://www.qcloud.com/product/ci)
 
 ## 安装
 
@@ -46,6 +46,7 @@ npm install -g wecos
 | appDir | **[String]** | 默认 `./app`，小程序项目目录 |
 | cos | **[Object]** | 必填，填写需要上传到COS对应的配置信息，部分信息可在[COS控制台](https://console.qcloud.com/cos4/secret)查看 |
 
+---
 
 ## 高级配置
 
