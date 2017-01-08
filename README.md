@@ -64,6 +64,8 @@ wecos
 | backupDir | **[String]** | 默认 `./wecos_backup`，备份目录 |
 | uploadFileSuffix | **[Array]** | 默认 `[".jpg", ".png", ".gif"]`，图片上传后缀名配置 |
 | uploadFileBlackList | **[Array]** | 默认 `[]`，图片资源黑名单 |
+| replaceHost | **[String|Array]** | 默认 `''`，把指定域名替换成 targetHost |
+| targetHost | **[String]** | 默认 `''`，使用自定义域名 |
 | compress | **[Boolean]** | 默认 `false`，是否开启压缩图片 |
 | watch | **[Boolean]** | 默认 `true`，是否开启实时监听项目目录 |
 
@@ -84,6 +86,30 @@ WeCOS默认支持`jpg,png,gif`三种格式，假如你还需要添加其他格�
 
 ```json
   "uploadFileSuffix": [".jpg",".png",".gif",".webp"]
+```
+<br/>
+#### 设置图片黑名单
+
+开发过程中，某些特定的图片我们不希望被上传，可以通过WeCOS的黑名单配置来解决这个问题，配置后上传程序会自动忽略掉这些图片
+
+黑名单配置支持目录或具体到文件名的写法
+```json
+  "uploadFileBlackList": ["./images/logo.png","./logo/"]
+```
+<br/>
+#### 自定义域名
+
+如果希望 COS 文件链接使用自定义的域名，可以配置 targetHost 代替默认域名，可以省略：`http://`：
+
+```json
+  "targetHost": "http://example.com"
+```
+
+如果代码中的图片链接想换一个域名，可以配置 replaceHost targetHost 来实现。
+
+```json
+  "replaceHost": "http://wx-12345678.myqcloud.com",
+  "targetHost": "https://example.com"
 ```
 <br/>
 #### 设置图片黑名单
