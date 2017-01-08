@@ -64,7 +64,7 @@ wecos
 | backupDir | **[String]** | 默认 `./wecos_backup`，备份目录 |
 | uploadFileSuffix | **[Array]** | 默认 `[".jpg", ".png", ".gif"]`，图片上传后缀名配置 |
 | uploadFileBlackList | **[Array]** | 默认 `[]`，图片资源黑名单 |
-| replaceHost | **[String|Array]** | 默认 `''`，把指定域名替换成 targetHost |
+| replaceHost | **[String]** | 默认 `''`，把指定域名替换成 targetHost |
 | targetHost | **[String]** | 默认 `''`，使用自定义域名 |
 | compress | **[Boolean]** | 默认 `false`，是否开启压缩图片 |
 | watch | **[Boolean]** | 默认 `true`，是否开启实时监听项目目录 |
