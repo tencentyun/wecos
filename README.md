@@ -172,6 +172,14 @@ wecos({
 
 ```
 
+<br/>
+<br/>
+
+## 相关
+
+* [WeCOS-UGC-DEMO](https://github.com/tencentyun/wecos-ugc-upload-demo)——小程序用户资源上传COS DEMO
+
+* [COS-AUTH](https://github.com/tencentyun/cos-auth)——COS鉴权服务器DEMO
 
 
 
