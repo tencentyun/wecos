@@ -1,6 +1,6 @@
 {
   "name": "wecos",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Tencent Qcloud COS about node utilities for wxapp minify.",
   "keywords": [
     "cos",
