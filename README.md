@@ -1,6 +1,7 @@
 # WeCOS —— 微信小程序 COS 瘦身解决方案
 
-通过WeCOS，替换小程序项目中的静态图片资源地址且把文件提交到[腾讯云对象存储服务（COS）](https://www.qcloud.com/product/cos) ，减小小程序包大小，为开发者解决包大小超过限制的烦恼。
+通过WeCOS，你的小程序项目中的图片资源会自动上传到你的[腾讯云对象存储服务（COS）](https://www.qcloud.com/product/cos)，且WeCOS自动替换代码中图片资源地址的引用为线上地址，移除项目目录中的图片资源，从而减小小程序包大小，为你解决包大小超过限制的烦恼。 
+![WeCOS](https://pic1.zhimg.com/v2-cc9a13ee4c09935127181a66ebe4a3e8_b.jpg)
 <br/>
 
 ## 为什么你需要 WeCOS
