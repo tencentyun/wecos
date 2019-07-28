@@ -32,7 +32,7 @@ npm install -g wecos
 {
   "appDir": "./app",
   "cos": {
-    "secret_id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    "secret_id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     "secret_key": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     "bucket": "wxapp-1251902136",
     "region": "ap-guangzhou", //创建bucket时选择的地域简称
