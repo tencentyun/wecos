@@ -1,6 +1,6 @@
 {
-  "name": "wecos",
-  "version": "2.0.3",
+  "name": "xoos",
+  "version": "1.0.3",
   "description": "Tencent Qcloud COS about node utilities for wxapp minify.",
   "keywords": [
     "cos",
@@ -14,7 +14,7 @@
     "test-config-option": "cd test && node test-config-option.js"
   },
   "bin": {
-    "wecos": "./bin/wecos.js"
+    "xoos": "./bin/wecos.js"
   },
   "homepage": "https://github.com/tencentyun/wecos",
   "bugs": "https://github.com/tencentyun/wecos/issues",
@@ -42,6 +42,8 @@
   },
   "license": "MIT",
   "dependencies": {
+    "qiniu": "^7.7.0",
+    "cross-env": "^7.0.3",
     "cos-nodejs-sdk-v5": "^2.4.9",
     "glob": "^7.1.1",
     "lodash": "^4.17.4",
